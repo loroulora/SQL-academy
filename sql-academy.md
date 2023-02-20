@@ -38,7 +38,7 @@ FROM Company
   INNER JOIN Trip on Company.id = Trip.company
 where Trip.plane like 'Boeing';
 
-#7. Вывести все названия самолётов, на которых можно улететь в Москву (Moscow)
+# 7. Вывести все названия самолётов, на которых можно улететь в Москву (Moscow)
 
 select DISTINCT trip.plane
 from trip
@@ -72,3 +72,17 @@ where LENGTH(name) = (
     SELECT MAX(LENGTH(name))
     from passenger
   );
+
+# 12. Вывести id и количество пассажиров для всех прошедших полётов
+
+SELECT trip,
+  COUNT(Pass_in_trip.passenger) as count
+from Pass_in_trip
+group by trip;
+
+# 13. Вывести имена людей, у которых есть полный тёзка среди пассажиров
+
+SELECT passenger.name
+FROM passenger
+group by passenger.name
+HAVING COUNT (NAME) > 1
