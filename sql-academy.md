@@ -5,8 +5,8 @@ MySQL
 # 1. Вывести имена всех людей, которые есть в базе данных авиакомпаний
 
 ``` 
-SELECT Passenger.name
-from Passenger; 
+{+ SELECT Passenger.name
+from Passenger; +}
 ```
 
 # 2. Вывести названия всеx авиакомпаний
