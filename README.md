@@ -1,2 +1,2 @@
 # SQL-academy
-My Solved tasks in SQL Academy
+Hello, here you can see my Solved tasks in SQL Academy
